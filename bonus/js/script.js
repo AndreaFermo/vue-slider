@@ -46,11 +46,11 @@ const { createApp } = Vue
         clickImage(newActiveImage) {
             this.activeImage = newActiveImage;
         },
-        mouseOver: function() {
-            clearInterval(this.autoPlay)
+        mouseOver() {
+            clearInterval(this.autoPlay);
         },
-        mouseLeave: function() {
-            autoPlay = setInterval(this.nextImage, 3000);
+        mouseLeave() {
+            this.autoPlay = setInterval(this.nextImage, 3000);
         }
     },
    
